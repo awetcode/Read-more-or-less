@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show More</title>
+	<script src="./js/jQuery.js">
+	</script>
+</head>
+<body>
+
+<p>
+	Do you want to learn how to manifest? 
+	<br>
+	<span class="hidden">First step, be clear on what you want</span>
+	<a href="" class="read_more">Read More</a>
+</p>
+
+<p>
+	Do you believe in manifestation? 
+	<br>
+	<span class="hidden">Believing is an important ingredient</span>
+	<a href="" class="read_more">Read More</a>
+</p>
+
+<p>
+	What's the secret? 
+	<br>
+	<span class="hidden">The secret is allowing yourself to receive</span>
+	<a href="" class="read_more">Read More</a>
+</p>
+
+	<script>
+		$(function(){
+			$('p span.hidden').hide();
+
+			$('a.read_more').click(function(){
+				if( $(this).text() == 'Read More' ){
+
+				$(this).parent().find('span.hidden').show();
+				$(this).text( 'Read Less' )
+
+			}
+			else
+			{
+				$(this).parent().find( 'span.hidden' ).hide();
+				$(this).text( 'Read More' );
+			}
+
+				return false;
+			})
+		})
+	</script>
+
+
+</body>
+</html>
